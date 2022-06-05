@@ -204,26 +204,26 @@ class _CustomFoodScreenState extends State<CustomFoodScreen> {
                         InkWell(
                           onTap: () {},
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 4.0, vertical: 8),
+                            padding: const EdgeInsets.only(bottom: 8),
                             child: Container(
                               width: 20,
                               height: 50,
-                              decoration: const BoxDecoration(
-                                  color: Color.fromARGB(255, 255, 111, 111),
-                                  borderRadius: BorderRadius.only(
+                              decoration: BoxDecoration(
+                                boxShadow: [shadowList()],
+                                  color: const Color.fromARGB(255, 255, 111, 111),
+                                  borderRadius: const BorderRadius.only(
                                       topRight: Radius.circular(10),
                                       bottomLeft: Radius.circular(10),
                                       bottomRight: Radius.circular(10))),
                               child: Padding(
                                 padding: const EdgeInsets.only(left: 10.0),
-                                child: Row(
-                                  children: const [
-                                    Icon(Iconsax.shopping_cart),
-                                    SizedBox(
+                                child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                                  children:  [
+                                    const Icon(Iconsax.shopping_cart),
+                                    const SizedBox(
                                       width: 20,
                                     ),
-                                    Text("Add to Cart")
+                                    Text("Add to Cart",style: textStyleSemiBold(14),)
                                   ],
                                 ),
                               ),
