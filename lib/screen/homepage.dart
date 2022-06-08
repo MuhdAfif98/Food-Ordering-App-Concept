@@ -105,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     physics: const BouncingScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     children: [
-                      category("assets/burger.png", "Burger",
+                      category("assets/burgers.png", "Burger",
                           const Color.fromRGBO(255, 0, 0, 0.2)),
                       category("assets/fries.png", "Snacks",
                           const Color.fromRGBO(36, 255, 0, 0.2)),

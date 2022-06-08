@@ -38,6 +38,7 @@ dependencies:
   carousel_slider: ^4.1.1
   syncfusion_flutter_sliders: ^20.1.58
   quantity_input: ^1.0.2
+  cached_network_image: ^3.2.1
 
 dev_dependencies:
   flutter_test:
@@ -66,6 +67,7 @@ flutter:
     - assets/
     - assets/popular_menu/
     - assets/burger/
+    - assets/burger_list/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

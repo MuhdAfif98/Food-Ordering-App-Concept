@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cafe_ordering_app/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -17,6 +18,21 @@ class _CustomFoodScreenState extends State<CustomFoodScreen> {
   double _valuePatty = 0;
   double _valueSpicy = 0;
   int quantity = 0;
+
+  List<String> burgerList = [
+    "assets/burger_list/burger1.jpg",
+    "assets/burger_list/burger2.jpg",
+    "assets/burger_list/burger3.jpg",
+    "assets/burger_list/burger4.jpg",
+    "assets/burger_list/burger5.jpg",
+    "assets/burger_list/burger6.jpg",
+    "assets/burger_list/burger7.jpg",
+    "assets/burger_list/burger8.jpg",
+    "assets/burger_list/burger9.jpg",
+    "assets/burger_list/burger10.jpg",
+    "assets/burger_list/burger11.jpg",
+    "assets/burger_list/burger12.jpg",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -209,21 +225,26 @@ class _CustomFoodScreenState extends State<CustomFoodScreen> {
                               width: 20,
                               height: 50,
                               decoration: BoxDecoration(
-                                boxShadow: [shadowList()],
-                                  color: const Color.fromARGB(255, 255, 111, 111),
+                                  boxShadow: [shadowList()],
+                                  color:
+                                      const Color.fromARGB(255, 255, 111, 111),
                                   borderRadius: const BorderRadius.only(
                                       topRight: Radius.circular(10),
                                       bottomLeft: Radius.circular(10),
                                       bottomRight: Radius.circular(10))),
                               child: Padding(
                                 padding: const EdgeInsets.only(left: 10.0),
-                                child: Row(mainAxisAlignment: MainAxisAlignment.center,
-                                  children:  [
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
                                     const Icon(Iconsax.shopping_cart),
                                     const SizedBox(
                                       width: 20,
                                     ),
-                                    Text("Add to Cart",style: textStyleSemiBold(14),)
+                                    Text(
+                                      "Add to Cart",
+                                      style: textStyleSemiBold(14),
+                                    )
                                   ],
                                 ),
                               ),
@@ -243,26 +264,37 @@ class _CustomFoodScreenState extends State<CustomFoodScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 5),
                 child: Column(
                   children: [
-                    ListView(
-                      addRepaintBoundaries: true,
-                      addAutomaticKeepAlives: true,
-                      reverse: true,
+                    //PAKAI .BUILDER
+                    ListView.builder(
+                      itemCount: burgerList.length,
                       physics: const BouncingScrollPhysics(),
                       scrollDirection: Axis.vertical,
                       shrinkWrap: true,
-                      children: [
-                        listBurger(),
-                        listBurger(),
-                        listBurger(),
-                        listBurger(),
-                        listBurger(),
-                        listBurger(),
-                        listBurger(),
-                        listBurger(),
-                        listBurger(),
-                        listBurger(),
-                        listBurger(),
-                      ],
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 4.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: [
+                                  BoxShadow(
+                                      blurRadius: 4,
+                                      spreadRadius: 0,
+                                      color: Colors.black.withOpacity(0.3),
+                                      offset: const Offset(0, 4))
+                                ]),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: Image.asset(
+                                burgerList[index],
+                                height: 100,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                        );
+                      },
                     )
                   ],
                 ),
