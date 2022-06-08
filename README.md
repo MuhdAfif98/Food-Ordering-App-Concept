@@ -1,16 +1,9 @@
-# cafe_ordering_app
+# Cafe Ordering Application UI Concept
 
-A new Flutter project.
+A cafe ordering application using Flutter.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is a project that use dart language to create the UI
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot 2022-06-08 115708](https://user-images.githubusercontent.com/44563274/172528396-572697cf-92b1-4db3-8429-a7b80c19fd0f.png)
